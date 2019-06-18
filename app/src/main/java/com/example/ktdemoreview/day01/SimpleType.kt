@@ -51,3 +51,27 @@ fun ktUseJava() {
     var money: BigDecimal = BigDecimal(m1)
     println(money)
 }
+
+/**
+ * 智能类型推断，与类型转换
+ */
+fun aiTYpe() {
+    var a = 10
+    var b = "10"
+    var c = b.toInt()
+    var d = a.toLong()
+    var e: Long = 4
+    e = a.toLong()
+
+}
+
+
+fun varVal() {
+    //var  修饰变量
+    var a = 1
+    a = 2
+    //val 修饰常量,一般推荐使用val
+    val b = 9
+
+}
+
