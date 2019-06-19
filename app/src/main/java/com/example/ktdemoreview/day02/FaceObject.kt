@@ -17,9 +17,22 @@ fun main() {
 //    val nesw = Nesw()
 //    nesw.title = "haha"
 
-    val p = Person1("aa", 14, "甜美")
-    println(p.name)
+//    val p = Person1("aa", 14, "甜美")
+//    println(p.name)
 //    p.voice = "aa"
+
+//    val s=Student("zhangsan ",19,22)
+
+    //智能类型推断
+    val sleepDog: Dog = SheepDog()
+    if (sleepDog is SheepDog) {
+        sleepDog.fangYang()
+    }
+    val homedog: Dog = HomeDog()
+    //类型强转  用as
+    homedog as HomeDog
+    homedog.kanjia()
+
 
 }
 
@@ -74,7 +87,39 @@ class Person(name: String, age: Int) {
 class Person1(var name: String, var age: Int, val voice: String)
 
 
+class Student(name: String, age: Int) {
 
+    var id: Int = 0
+
+    init {
+        println("init")
+    }
+
+    //次构函数，用constructor修饰，调用了主构造方法
+    constructor(name: String, age: Int, id: Int) : this(name, age) {
+        this.id = id
+        println("次构造函数")
+    }
+
+}
+
+
+abstract class Dog
+
+
+class SheepDog : Dog() {
+    fun fangYang() {
+        println("牧羊犬放羊")
+    }
+
+}
+
+
+class HomeDog : Dog() {
+    fun kanjia() {
+        println("土狗看家")
+    }
+}
 
 
 
