@@ -122,6 +122,29 @@ class HomeDog : Dog() {
 }
 
 
+class outClass {
+    val name = "aa"
+
+    //嵌套类 相当于java的静态内部类
+    class innerClass() {
+        val name = "bb"
+        fun pp() {
+            println(name)
+            println()
+        }
+    }
+
+    //使用inner关键字，创建内部类
+    inner class innClass() {
+        val name = "cc"
+        fun pp() {
+            println(this@outClass.name)
+        }
+    }
+
+}
+
+
 
 
 
