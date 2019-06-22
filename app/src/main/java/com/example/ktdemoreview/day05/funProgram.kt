@@ -49,3 +49,18 @@ fun cacel(a: Int, b: Int, block: (Int, Int) -> Int): Int {
     block.invoke(a, b)
     return block(a, b)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
